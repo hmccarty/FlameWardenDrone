@@ -1,10 +1,12 @@
 import cv2 
 import numpy as np
 import threading
+import random
 
 class FlameDetector:
-	def __init__(self, video_src):
+	def __init__(self, video_src, fb):
                 self.video = cv2.VideoCapture(video_src)
+                self.fb = fb
 	
 	def start_processing(self):
                 t = threading.Thread(target=self.processing_thread, args=())
@@ -39,7 +41,8 @@ class FlameDetector:
 			im_keys = cv2.drawKeypoints(output, keypoints, np.array([]), (0,255,0), cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
                         
                         cv2.imshow("vision", im_keys)
-			cv2.imshow("normal", frame)
+			#cv2.imshow("normal", frame)
+                        self.fb.add_fire(
 
 			if cv2.waitKey(1) and 0xFF == ord('q'):
 				break

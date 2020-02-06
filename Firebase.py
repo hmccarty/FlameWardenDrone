@@ -1,7 +1,7 @@
 from firebase import firebase
 import random
 
-auth_url = 'https://bmake2020-7dae9.firebaseio.com/'
+auth_url = 'ENTER AUTH URL HERE'
 
 class Firebase:
     def __init__(self, id):

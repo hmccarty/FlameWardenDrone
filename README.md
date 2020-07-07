@@ -3,7 +3,7 @@
 # Purpose
 This code runs in tangent with the Flame Warden project. Flame Warden was a data aggregation tool for first responders. This project was submitted in part for the NXP Hovergames. For more information on the project, [check here](https://www.hackster.io/flame-warden/flame-warden-658163).
 
-Running the main module will create an instance that does basic vision processing for detected fires`then posts detected hotspots to the linked Google Firebase.
+Running the main module will create an instance that does basic vision processing for detected fires then posts the detected hotspots to a linked Google Firebase.
 
 # Dependencies
 - Python 2.7
